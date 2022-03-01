@@ -85,7 +85,8 @@
 
 <!-- Articles -->
 ### Articles
-[]()
+
+[Making The Inspector Look Better](https://blog.devgenius.io/making-the-inspector-look-better-175baf39ada0)
 []()
 []()
 
@@ -107,11 +108,8 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 
-* [Ryan Hipple's Game Architecture with Scriptable Objects from Unite Austin 2017 ](https://github.com/roboryantron/Unite2017)
-* [Using Scribtable Objects For Script Communication](https://blog.devgenius.io/script-communication-in-unity-using-scriptable-objects-ad2ef0d99c59)
 * [Scribtable Object Game Events](https://blog.devgenius.io/scriptableobject-game-events-1f3401bbde72)
 * [Making The Inspector Look Better](https://blog.devgenius.io/making-the-inspector-look-better-175baf39ada0)
-* [Creating Custom Packages](https://blog.devgenius.io/creating-custom-packages-for-use-in-unity-7dfbaa49e4b4)
 
 
 <!--
