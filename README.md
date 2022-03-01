@@ -2,29 +2,29 @@
 <!--<h3 align="center">Project Title</h3>-->
 <!--<h2 align="center">Project Description</h2>-->
 <p align="center">
-	<img src ="https://github-readme-stats-blush-omega.vercel.app/api/pin?username=JamesLaFritz&repo=MyTemplateRepo&theme=react"/>'
+	<img src ="https://github-readme-stats-blush-omega.vercel.app/api/pin?username=JamesLaFritz&repo=Design-Patterns-For-Unity&theme=react"/>'
 	<br />
-	<a href="https://github.com/JamesLaFritz/MyTemplateRepo/issues">Report Bug</a>
+	<a href="https://github.com/JamesLaFritz/Design-Patterns-For-Unity/issues">Report Bug</a>
         ·
-        <a href="https://github.com/JamesLaFritz/MyTemplateRepo/issues">Request Feature</a>
+        <a href="https://github.com/JamesLaFritz/Design-Patterns-For-Unity/issues">Request Feature</a>
 </p>
 
 <!-- PROJECT SHIELDS -->
 <p align="center">
-  <a href="https://github.com/JamesLafritz/MyTemplateRepo/graphs/contributors">
-	  <img src="https://img.shields.io/github/contributors/JamesLafritz/MyTemplateRepo.svg?style=for-the-badge"/>
+  <a href="https://github.com/JamesLafritz/Design-Patterns-For-Unity/graphs/contributors">
+	  <img src="https://img.shields.io/github/contributors/JamesLafritz/Design-Patterns-For-Unity.svg?style=for-the-badge"/>
   </a>
-  <a href="https://img.shields.io/github/forks/JamesLafritz/MyTemplateRepo.svg?style=for-the-badge">
-	  <img src="https://img.shields.io/github/forks/JamesLafritz/MyTemplateRepo.svg?style=for-the-badge"/>
+  <a href="https://img.shields.io/github/forks/JamesLafritz/Design-Patterns-For-Unity.svg?style=for-the-badge">
+	  <img src="https://img.shields.io/github/forks/JamesLafritz/Design-Patterns-For-Unity.svg?style=for-the-badge"/>
   </a>
-  <a href="https://github.com/JamesLafritz/MyTemplateRepo/stargazers">
-	  <img src="https://img.shields.io/github/stars/JamesLafritz/MyTemplateRepo.svg?style=for-the-badge"/>
+  <a href="https://github.com/JamesLafritz/Design-Patterns-For-Unity/stargazers">
+	  <img src="https://img.shields.io/github/stars/JamesLafritz/Design-Patterns-For-Unity.svg?style=for-the-badge"/>
   </a>
-  <a href="https://github.com/JamesLafritz/MyTemplateRepo/issues">
-	  <img src="https://img.shields.io/github/issues/JamesLafritz/MyTemplateRepo.svg?style=for-the-badge"/>
+  <a href="https://github.com/JamesLafritz/Design-Patterns-For-Unity/issues">
+	  <img src="https://img.shields.io/github/issues/JamesLafritz/Design-Patterns-For-Unity.svg?style=for-the-badge"/>
   </a>
-  <a href="https://img.shields.io/github/license/JamesLafritz/MyTemplateRepo.svg?style=for-the-badge">
-	  <img src="https://img.shields.io/github/license/JamesLafritz/MyTemplateRepo.svg?style=for-the-badge"/>
+  <a href="https://img.shields.io/github/license/JamesLafritz/Design-Patterns-For-Unity.svg?style=for-the-badge">
+	  <img src="https://img.shields.io/github/license/JamesLafritz/Design-Patterns-For-Unity.svg?style=for-the-badge"/>
   </a>
 </p>
 
@@ -46,7 +46,7 @@
 
 <!-- PROJECT LOGO -->
 <p align="center">
-  <a href="https://github.com/JamesLaFritz/Dungeon-Escape-Mobile">
+  <a href="https://github.com/JamesLaFritz/Design-Patterns-For-Unity">
     <img src="Images/Logo.png" alt="Logo" width="256"/>
   </a>
 </p>
@@ -95,7 +95,7 @@
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [open issues](https://github.com/JamesLaFritz/MyTemplateRepo/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/JamesLaFritz/Design-Patterns-For-Unity/issues) for a list of proposed features (and known issues).
 
 
 
