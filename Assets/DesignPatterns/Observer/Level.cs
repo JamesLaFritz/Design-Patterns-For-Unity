@@ -4,11 +4,13 @@
 
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Observer
 {
     public class Level : MonoBehaviour
     {
+        [SerializeField] private UnityEvent m_levelUpEvent;
         [SerializeField] private int m_pointsPerLevel = 200;
         public int ExperiencePoints { get; private set; }
 
@@ -25,7 +27,12 @@ namespace Observer
 
         public void GainExperience(int amountToGain)
         {
+            int previousLevel = CurrentLevel;
             ExperiencePoints += amountToGain;
+            if (CurrentLevel > previousLevel)
+            {
+                m_levelUpEvent.Invoke();
+            }
         }
     }
 }
