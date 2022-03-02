@@ -7,6 +7,7 @@ using UnityEngine;
 
 namespace Observer
 {
+    [RequireComponent(typeof(Level))]
     public class Health : MonoBehaviour
     {
         [SerializeField] private int m_fullHealth = 100;
@@ -17,6 +18,16 @@ namespace Observer
         {
             ResetHealth();
             StartCoroutine(HealthDrain());
+        }
+
+        private void OnEnable()
+        {
+            GetComponent<Level>().LevelUpEvent += ResetHealth;
+        }
+
+        private void OnDisable()
+        {
+            GetComponent<Level>().LevelUpEvent -= ResetHealth;
         }
 
         public void ResetHealth()
