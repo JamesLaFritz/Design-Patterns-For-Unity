@@ -2,6 +2,7 @@
 // 03-01-2022
 // James LaFritz
 
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
@@ -15,6 +16,8 @@ namespace Observer
         public int ExperiencePoints { get; private set; }
 
         public int CurrentLevel => ExperiencePoints / m_pointsPerLevel;
+
+        public delegate void LevelUpDelegate();
 
         private IEnumerator Start()
         {
