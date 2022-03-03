@@ -43,6 +43,8 @@ namespace Observer
                 m_levelUpEvent.Invoke();
                 if (LevelUpEvent != null)
                     LevelUpEvent.Invoke();
+                if (LevelUpIntEvent != null)
+                    LevelUpIntEvent.Invoke(CurrentLevel);
             }
         }
     }
