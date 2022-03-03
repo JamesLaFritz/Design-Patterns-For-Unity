@@ -21,6 +21,10 @@ namespace Observer
 
         public event LevelUpDelegate LevelUpEvent;
 
+        public delegate void LevelUpIntDelegate(int currentLevel);
+
+        public event LevelUpIntDelegate LevelUpIntEvent;
+
         private IEnumerator Start()
         {
             while (true)
