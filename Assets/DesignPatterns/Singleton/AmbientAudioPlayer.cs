@@ -10,6 +10,17 @@ namespace Singleton
     {
         private static AmbientAudioPlayer _instance;
 
+        public static AmbientAudioPlayer GetInstance()
+        {
+            if (_instance == null)
+            {
+                throw new System.NullReferenceException(
+                    "You are trying to acess a non existing Ambient Audio Player Please make sure one exist in the scene");
+            }
+
+            return _instance;
+        }
+
         private void Awake()
         {
             if (_instance != null && _instance != this)
