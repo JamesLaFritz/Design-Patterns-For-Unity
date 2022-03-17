@@ -25,6 +25,8 @@ namespace Observer
 
         public event LevelUpIntDelegate LevelUpIntEvent;
 
+        public Action levelUpAction;
+
         private IEnumerator Start()
         {
             while (true)
@@ -45,6 +47,8 @@ namespace Observer
                     LevelUpEvent.Invoke();
                 if (LevelUpIntEvent != null)
                     LevelUpIntEvent.Invoke(CurrentLevel);
+                if (levelUpAction != null)
+                    levelUpAction.Invoke();
             }
         }
     }
