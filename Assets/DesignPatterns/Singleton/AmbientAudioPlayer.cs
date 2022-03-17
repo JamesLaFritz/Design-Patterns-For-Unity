@@ -6,6 +6,7 @@ using UnityEngine;
 
 namespace Singleton
 {
+    [RequireComponent(typeof(AudioSource))]
     public class AmbientAudioPlayer : MonoBehaviour
     {
         private static AmbientAudioPlayer _instance;
@@ -21,6 +22,8 @@ namespace Singleton
             return _instance;
         }
 
+        private AudioSource m_audioSource;
+
         private void Awake()
         {
             if (_instance != null && _instance != this)
@@ -32,7 +35,14 @@ namespace Singleton
             {
                 _instance = this;
                 DontDestroyOnLoad(gameObject);
+                m_audioSource = GetComponent<AudioSource>();
             }
+        }
+
+        public void Play(AudioClip ambientMusic)
+        {
+            m_audioSource.clip = ambientMusic;
+            m_audioSource.Play();
         }
     }
 }
