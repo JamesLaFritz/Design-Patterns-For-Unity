@@ -22,12 +22,12 @@ namespace Observer
 
         private void OnEnable()
         {
-            GetComponent<Level>().LevelUpEvent += ResetHealth;
+            GetComponent<Level>().levelUpAction += ResetHealth;
         }
 
         private void OnDisable()
         {
-            GetComponent<Level>().LevelUpEvent -= ResetHealth;
+            GetComponent<Level>().levelUpAction -= ResetHealth;
         }
 
         public void ResetHealth()
