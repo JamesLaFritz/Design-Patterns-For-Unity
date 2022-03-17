@@ -8,6 +8,19 @@ namespace Singleton
 {
     public class AmbientAudioPlayer : MonoBehaviour
     {
-        
+        private static AmbientAudioPlayer _instance = null;
+
+        private void Awake()
+        {
+            if (_instance != null && _instance != this)
+            {
+                Debug.LogWarning("There is already an AmbientAudioPlayer in the Scene there should only ever be one!", this);
+                Destroy(this);
+            }
+            else
+            {
+                _instance = this;
+            }
+        }
     }
 }
