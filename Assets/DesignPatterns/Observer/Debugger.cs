@@ -20,5 +20,20 @@ namespace Observer
                 Debug.Log($"Exp: {level!.ExperiencePoints}, Level: {level.CurrentLevel}, Health: {health!.CurrentHealth}");
             }
         }
+
+        private void OnEnable()
+        {
+            GetComponent<Level>().LevelUpIntEvent += ShowLevelUp;
+        }
+
+        private void OnDisable()
+        {
+            GetComponent<Level>().LevelUpIntEvent -= ShowLevelUp;
+        }
+
+        private void ShowLevelUp(int newLevel)
+        {
+            Debug.Log($"You have Leveled up: {newLevel}");
+        }
     }
 }
