@@ -17,9 +17,7 @@ namespace Observer
 
         public int CurrentLevel => ExperiencePoints / m_pointsPerLevel;
 
-        public delegate void LevelUpIntDelegate(int currentLevel);
-
-        public event LevelUpIntDelegate LevelUpIntEvent;
+        public Action<int> LevelUpIntAction;
 
         public Action levelUpAction;
 
@@ -39,8 +37,8 @@ namespace Observer
             if (CurrentLevel > previousLevel)
             {
                 m_levelUpEvent.Invoke();
-                if (LevelUpIntEvent != null)
-                    LevelUpIntEvent.Invoke(CurrentLevel);
+                if (LevelUpIntAction != null)
+                    LevelUpIntAction.Invoke(CurrentLevel);
                 if (levelUpAction != null)
                     levelUpAction.Invoke();
             }
