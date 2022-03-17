@@ -8,7 +8,7 @@ namespace Singleton
 {
     public class AmbientAudioPlayer : MonoBehaviour
     {
-        private static AmbientAudioPlayer _instance = null;
+        private static AmbientAudioPlayer _instance;
 
         private void Awake()
         {
@@ -20,6 +20,7 @@ namespace Singleton
             else
             {
                 _instance = this;
+                DontDestroyOnLoad(gameObject);
             }
         }
     }
