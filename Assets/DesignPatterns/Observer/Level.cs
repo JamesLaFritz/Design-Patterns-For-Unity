@@ -17,9 +17,7 @@ namespace Observer
 
         public int CurrentLevel => ExperiencePoints / m_pointsPerLevel;
 
-        public Action<int> LevelUpIntAction;
-
-        public Action levelUpAction;
+        public Action<int> levelUp;
 
         private IEnumerator Start()
         {
@@ -30,18 +28,14 @@ namespace Observer
             }
         }
 
-        public void GainExperience(int amountToGain)
+        private void GainExperience(int amountToGain)
         {
             int previousLevel = CurrentLevel;
             ExperiencePoints += amountToGain;
-            if (CurrentLevel > previousLevel)
-            {
-                m_levelUpEvent.Invoke();
-                if (LevelUpIntAction != null)
-                    LevelUpIntAction.Invoke(CurrentLevel);
-                if (levelUpAction != null)
-                    levelUpAction.Invoke();
-            }
+            if (CurrentLevel <= previousLevel) return;
+
+            m_levelUpEvent?.Invoke();
+            levelUp?.Invoke(CurrentLevel);
         }
     }
 }

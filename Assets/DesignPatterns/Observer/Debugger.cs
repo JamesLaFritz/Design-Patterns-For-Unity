@@ -23,12 +23,12 @@ namespace Observer
 
         private void OnEnable()
         {
-            GetComponent<Level>().LevelUpIntAction += ShowLevelUp;
+            GetComponent<Level>().levelUp += ShowLevelUp;
         }
 
         private void OnDisable()
         {
-            GetComponent<Level>().LevelUpIntAction -= ShowLevelUp;
+            GetComponent<Level>().levelUp -= ShowLevelUp;
         }
 
         private void ShowLevelUp(int newLevel)

@@ -22,17 +22,22 @@ namespace Observer
 
         private void OnEnable()
         {
-            GetComponent<Level>().levelUpAction += ResetHealth;
+            GetComponent<Level>().levelUp += LevelUpHealth;
         }
 
         private void OnDisable()
         {
-            GetComponent<Level>().levelUpAction -= ResetHealth;
+            GetComponent<Level>().levelUp -= LevelUpHealth;
         }
 
-        public void ResetHealth()
+        private void ResetHealth()
         {
             CurrentHealth = m_fullHealth;
+        }
+
+        private void LevelUpHealth(int currentLevel)
+        {
+            ResetHealth();
         }
 
         private IEnumerator HealthDrain()
