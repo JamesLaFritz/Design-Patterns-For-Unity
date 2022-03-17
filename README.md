@@ -90,7 +90,7 @@ Demonstrates Different Programming Design Patterns In Unity. There are many diff
 <!-- Articles -->
 ### Articles
 
-[Making The Inspector Look Better](https://blog.devgenius.io/making-the-inspector-look-better-175baf39ada0)
+[The Observer Pattern](https://blog.devgenius.io/making-the-inspector-look-better-175baf39ada0)
 []()
 []()
 
