@@ -1,4 +1,4 @@
-// PlayRandomMusicOnAwake.cs
+// PlayRandomMusicOnStart.cs
 // 04-04-2022
 // James LaFritz
 
@@ -9,11 +9,11 @@ using Random = UnityEngine.Random;
 
 namespace Singleton
 {
-    public class PlayRandomMusicOnAwake : MonoBehaviour
+    public class PlayRandomMusicOnStart : MonoBehaviour
     {
         [SerializeField] private List<AudioClip> m_audioClips;
 
-        private void Awake()
+        private void Start()
         {
             if (m_audioClips == null || m_audioClips.Count < 1)
             {
