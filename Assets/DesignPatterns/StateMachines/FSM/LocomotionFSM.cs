@@ -8,6 +8,11 @@ namespace DesignPatterns.StateMachines.FSM
 {
     public class LocomotionFSM : MonoBehaviour
     {
-        
+        enum State
+        {
+            Grounded,
+            InAir,
+            Crouching
+        }
     }
 }
