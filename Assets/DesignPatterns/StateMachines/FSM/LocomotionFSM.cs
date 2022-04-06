@@ -32,5 +32,20 @@ namespace DesignPatterns.StateMachines.FSM
                     break;
             }
         }
+
+        private void Fall()
+        {
+            switch (m_currentState)
+            {
+                case State.Grounded:
+                    m_currentState = State.InAir;
+                    break;
+                case State.InAir:
+                    break;
+                case State.Crouching:
+                    m_currentState = State.InAir;
+                    break;
+            }
+        }
     }
 }
