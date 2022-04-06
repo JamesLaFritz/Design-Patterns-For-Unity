@@ -14,5 +14,7 @@ namespace DesignPatterns.StateMachines.FSM
             InAir,
             Crouching
         }
+
+        private State m_currentState = State.Grounded;
     }
 }
