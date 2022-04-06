@@ -2,6 +2,7 @@
 // 04-05-2022
 // James LaFritz
 
+using System;
 using UnityEngine;
 
 namespace DesignPatterns.StateMachines.FSM
@@ -16,5 +17,20 @@ namespace DesignPatterns.StateMachines.FSM
         }
 
         private State m_currentState = State.Grounded;
+
+        private void Jump()
+        {
+            switch (m_currentState)
+            {
+                case State.Grounded:
+                    m_currentState = State.InAir;
+                    break;
+                case State.InAir:
+                    break;
+                case State.Crouching:
+                    m_currentState = State.Grounded;
+                    break;
+            }
+        }
     }
 }
