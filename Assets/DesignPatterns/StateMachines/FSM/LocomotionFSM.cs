@@ -18,7 +18,7 @@ namespace DesignPatterns.StateMachines.FSM
 
         private State m_currentState = State.Grounded;
 
-        private void Jump()
+        public void Jump()
         {
             switch (m_currentState)
             {
@@ -33,7 +33,7 @@ namespace DesignPatterns.StateMachines.FSM
             }
         }
 
-        private void Fall()
+        public void Fall()
         {
             switch (m_currentState)
             {
@@ -44,6 +44,35 @@ namespace DesignPatterns.StateMachines.FSM
                     break;
                 case State.Crouching:
                     m_currentState = State.InAir;
+                    break;
+            }
+        }
+
+        public void Land()
+        {
+            switch (m_currentState)
+            {
+                case State.Grounded:
+                    break;
+                case State.InAir:
+                    m_currentState = State.Grounded;
+                    break;
+                case State.Crouching:
+                    break;
+            }
+        }
+
+        public void Crouch()
+        {
+            switch (m_currentState)
+            {
+                case State.Grounded:
+                    m_currentState = State.Crouching;
+                    break;
+                case State.InAir:
+                    break;
+                case State.Crouching:
+                    m_currentState = State.Grounded;
                     break;
             }
         }
