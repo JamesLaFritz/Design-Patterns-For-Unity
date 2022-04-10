@@ -2,14 +2,15 @@
 // 04-05-2022
 // James LaFritz
 
-using System;
+using System.Diagnostics.CodeAnalysis;
 using UnityEngine;
 
 namespace DesignPatterns.StateMachines.FSM
 {
+    [SuppressMessage("ReSharper", "IteratorNeverReturns")]
     public class LocomotionFSM : MonoBehaviour
     {
-        enum State
+        private enum State
         {
             Grounded,
             InAir,
@@ -75,6 +76,32 @@ namespace DesignPatterns.StateMachines.FSM
                     m_currentState = State.Grounded;
                     break;
             }
+        }
+
+        private void Update()
+        {
+            if (m_currentState == State.InAir)
+            {
+                // Simulate Physics of the character being in the air gravity is being applied
+                if (Random.Range(0, 100) > 20)
+                {
+                    Land();
+                }
+
+                return;
+            }
+
+            // Simulate physics and the character falling of a ledge
+            if (Random.Range(0, 100) > 90)
+            {
+                Fall();
+                return;
+            }
+
+            if (Input.GetKeyDown(KeyCode.Space))
+                Jump();
+            else if (Input.GetKeyDown(KeyCode.C))
+                Crouch();
         }
     }
 }
