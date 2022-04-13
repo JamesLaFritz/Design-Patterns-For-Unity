@@ -28,9 +28,15 @@ namespace DesignPatterns.StateMachines.StatePattern
 
         #endregion
 
+        private void Awake()
+        {
+            m_currentState = new GroundedState();
+        }
+
         private void Update()
         {
             m_currentState.UpdateState(this);
+            Debug.Log(m_currentState.GetType().Name);
         }
     }
 }
