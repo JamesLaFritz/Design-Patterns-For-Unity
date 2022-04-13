@@ -10,7 +10,10 @@ namespace DesignPatterns.StateMachines.StatePattern.LocomotionStates
     {
         #region Implementation of ILocomotionState
 
-        /// <inheritdoc />
+        public void EnterState(ILocomotionContext context) { }
+
+        public void ExitState(ILocomotionContext context) { }
+
         public void UpdateState(ILocomotionContext context)
         {
             if (Input.GetKeyDown(KeyCode.Space))
@@ -23,12 +26,6 @@ namespace DesignPatterns.StateMachines.StatePattern.LocomotionStates
                 context.SetState(new GroundedState());
             }
         }
-
-        /// <inheritdoc />
-        public void EnterState(ILocomotionContext context) { }
-
-        /// <inheritdoc />
-        public void ExitState(ILocomotionContext context) { }
 
         #endregion
     }

@@ -10,13 +10,10 @@ namespace DesignPatterns.StateMachines.StatePattern.LocomotionStates
     {
         #region Implementation of ILocomotionState
 
-        /// <inheritdoc />
         public void EnterState(ILocomotionContext context) { }
 
-        /// <inheritdoc />
         public void ExitState(ILocomotionContext context) { }
 
-        /// <inheritdoc />
         public void UpdateState(ILocomotionContext context)
         {
             // Simulate Physics of the character being in the air gravity is being applied
