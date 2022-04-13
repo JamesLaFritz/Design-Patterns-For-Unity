@@ -22,8 +22,8 @@ namespace DesignPatterns.StateMachines.StatePattern
         public void SetState(ILocomotionState newState)
         {
             m_currentState.ExitState(this);
-            newState.EnterState(this);
             m_currentState = newState;
+            m_currentState.EnterState(this);
         }
 
         #endregion
