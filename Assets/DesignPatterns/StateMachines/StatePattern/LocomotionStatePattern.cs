@@ -14,7 +14,7 @@ namespace DesignPatterns.StateMachines.StatePattern
 
     public class LocomotionStatePattern : MonoBehaviour, ILocomotionContext
     {
-        [SerializeField] private ILocomotionState m_currentState;
+        private ILocomotionState m_currentState;
 
         #region Implementation of ILocomotionContext
 
