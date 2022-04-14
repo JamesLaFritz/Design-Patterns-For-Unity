@@ -17,7 +17,7 @@ namespace DesignPatterns.ObjectPolling
 
         private void OnBecameInvisible()
         {
-            Destroy(this);
+            Destroy(gameObject);
         }
     }
 }
