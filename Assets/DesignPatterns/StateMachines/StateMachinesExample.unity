@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 382024334}
   - component: {fileID: 382024333}
   m_Layer: 0
-  m_Name: LocomotionStatePattern
+  m_Name: LocomotionAnimatorStatePattern
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
