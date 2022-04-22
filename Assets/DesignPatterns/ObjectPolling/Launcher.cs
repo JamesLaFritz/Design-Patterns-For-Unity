@@ -25,7 +25,11 @@ namespace DesignPatterns.ObjectPolling
             return bullet;
         }
 
-        private void OnGetBullet(Bullet obj) { }
+        private void OnGetBullet(Bullet bullet)
+        {
+            bullet.gameObject.SetActive(true);
+            bullet.transform.position = transform.position;
+        }
 
         private void OnReleaseBullet(Bullet obj) { }
 
