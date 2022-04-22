@@ -3,12 +3,15 @@
 // James LaFritz
 
 using UnityEngine;
+using UnityEngine.Pool;
 
 namespace DesignPatterns.ObjectPolling
 {
     public class Launcher : MonoBehaviour
     {
         [SerializeField] private Bullet m_bulletPrefab;
+
+        private IObjectPool<Bullet> m_bulletPool;
 
         private void Update()
         {
