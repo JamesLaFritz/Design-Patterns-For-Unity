@@ -31,7 +31,10 @@ namespace DesignPatterns.ObjectPolling
             bullet.transform.position = transform.position;
         }
 
-        private void OnReleaseBullet(Bullet obj) { }
+        private void OnReleaseBullet(Bullet bullet)
+        {
+            bullet.gameObject.SetActive(false);
+        }
 
         private void OnDestroyBullet(Bullet obj) { }
 
