@@ -36,7 +36,10 @@ namespace DesignPatterns.ObjectPolling
             bullet.gameObject.SetActive(false);
         }
 
-        private void OnDestroyBullet(Bullet obj) { }
+        private void OnDestroyBullet(Bullet bullet)
+        {
+            Destroy(bullet.gameObject);
+        }
 
         private void Update()
         {
