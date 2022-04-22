@@ -22,6 +22,7 @@ namespace DesignPatterns.ObjectPolling
         private Bullet CreateBullet()
         {
             Bullet bullet = Instantiate(m_bulletPrefab, transform.position, Quaternion.identity);
+            bullet.SetPool(m_bulletPool);
             return bullet;
         }
 

@@ -3,12 +3,19 @@
 // James LaFritz
 
 using UnityEngine;
+using UnityEngine.Pool;
 
 namespace DesignPatterns.ObjectPolling
 {
     public class Bullet : MonoBehaviour
     {
         [SerializeField] private Vector3 m_speed;
+        private IObjectPool<Bullet> m_pool;
+
+        public void SetPool(IObjectPool<Bullet> pool)
+        {
+            m_pool = pool;
+        }
 
         private void Update()
         {
@@ -17,7 +24,7 @@ namespace DesignPatterns.ObjectPolling
 
         private void OnBecameInvisible()
         {
-            Destroy(gameObject);
+            m_pool?.Release(this);
         }
     }
 }
