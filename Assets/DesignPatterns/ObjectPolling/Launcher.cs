@@ -13,6 +13,23 @@ namespace DesignPatterns.ObjectPolling
 
         private IObjectPool<Bullet> m_bulletPool;
 
+        private void Awake()
+        {
+            m_bulletPool = new ObjectPool<Bullet>(CreateBullet, OnGetBullet, OnReleaseBullet, OnDestroyBullet);
+        }
+
+
+        private Bullet CreateBullet()
+        {
+            return null;
+        }
+
+        private void OnGetBullet(Bullet obj) { }
+
+        private void OnReleaseBullet(Bullet obj) { }
+
+        private void OnDestroyBullet(Bullet obj) { }
+
         private void Update()
         {
             if (Input.GetKeyDown(KeyCode.Space))
