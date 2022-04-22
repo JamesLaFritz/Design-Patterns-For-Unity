@@ -21,7 +21,8 @@ namespace DesignPatterns.ObjectPolling
 
         private Bullet CreateBullet()
         {
-            return null;
+            Bullet bullet = Instantiate(m_bulletPrefab, transform.position, Quaternion.identity);
+            return bullet;
         }
 
         private void OnGetBullet(Bullet obj) { }
@@ -34,7 +35,7 @@ namespace DesignPatterns.ObjectPolling
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                Instantiate(m_bulletPrefab, transform.position, Quaternion.identity);
+                m_bulletPool?.Get();
             }
         }
     }
