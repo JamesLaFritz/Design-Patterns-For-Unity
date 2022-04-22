@@ -15,7 +15,8 @@ namespace DesignPatterns.ObjectPolling
 
         private void Awake()
         {
-            m_bulletPool = new ObjectPool<Bullet>(CreateBullet, OnGetBullet, OnReleaseBullet, OnDestroyBullet);
+            m_bulletPool = new ObjectPool<Bullet>(CreateBullet, OnGetBullet, OnReleaseBullet, OnDestroyBullet,
+                                                  maxSize: 5);
         }
 
 
