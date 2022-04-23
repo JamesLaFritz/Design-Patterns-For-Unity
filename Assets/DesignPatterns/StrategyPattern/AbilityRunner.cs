@@ -8,17 +8,9 @@ namespace DesignPatterns.StrategyPattern
 {
     public class AbilityRunner : MonoBehaviour
     {
-        enum Ability
-        {
-            FireBall,
-            Rage,
-            Heal,
-            Melee
-        }
+        [SerializeField] private IAbility m_currentAbility;
 
-        [SerializeField] private Ability m_currentAbility = Ability.FireBall;
-
-        public void UseAbility()
+        /*public void UseAbility()
         {
             switch (m_currentAbility)
             {
@@ -38,13 +30,13 @@ namespace DesignPatterns.StrategyPattern
                     Debug.Log("No Ability Selected using Default: Launch Fireball");
                     break;
             }
-        }
+        }*/
 
         private void Update()
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                UseAbility();
+                m_currentAbility?.Use();
             }
         }
     }
