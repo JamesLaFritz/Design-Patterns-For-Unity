@@ -12,7 +12,8 @@ namespace DesignPatterns.StrategyPattern
         {
             FireBall,
             Rage,
-            Heal
+            Heal,
+            Melee
         }
 
         [SerializeField] private Ability m_currentAbility = Ability.FireBall;
@@ -25,10 +26,13 @@ namespace DesignPatterns.StrategyPattern
                     Debug.Log("Launch Fireball");
                     break;
                 case Ability.Rage:
-                    Debug.Log("Launch Fireball");
+                    Debug.Log("Rage Mode");
                     break;
                 case Ability.Heal:
-                    Debug.Log("Launch Fireball");
+                    Debug.Log("This should cure your wounds");
+                    break;
+                case Ability.Melee:
+                    Debug.Log("Laying down the smack down!");
                     break;
                 default:
                     Debug.Log("No Ability Selected using Default: Launch Fireball");
