@@ -8,7 +8,13 @@ namespace DesignPatterns.StrategyPattern
 {
     public class AbilityRunner : MonoBehaviour
     {
-        [SerializeField] private IAbility m_currentAbility;
+        private IAbility m_currentAbility;
+
+        public IAbility CurrentAbility
+        {
+            get => m_currentAbility;
+            set => m_currentAbility = value;
+        }
 
         private void Update()
         {

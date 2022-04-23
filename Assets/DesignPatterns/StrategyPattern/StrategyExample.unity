@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 173644254}
   - component: {fileID: 173644255}
+  - component: {fileID: 173644256}
   m_Layer: 0
   m_Name: AbilityRunner
   m_TagString: Untagged
@@ -167,7 +168,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 761fa294bf69440984f7ecbaf34c6b3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_currentAbility: 0
+--- !u!114 &173644256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 173644253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 766fdb220dd243519af2aaa0cf49d278, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1393023610
 GameObject:
   m_ObjectHideFlags: 0
