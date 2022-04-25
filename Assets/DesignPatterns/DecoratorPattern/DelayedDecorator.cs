@@ -2,7 +2,9 @@
 // 04-24-2022
 // James LaFritz
 
+using System.Threading.Tasks;
 using DesignPatterns.StrategyPattern;
+using UnityEngine;
 
 namespace DesignPatterns.DecoratorPattern
 {
@@ -12,9 +14,14 @@ namespace DesignPatterns.DecoratorPattern
 
         public IAbility Ability => m_ability;
 
-        public DelayedDecorator(IAbility ability)
+        private int m_delayTime;
+
+        private bool m_inUse;
+
+        public DelayedDecorator(IAbility ability, int delayTime = 1000)
         {
             m_ability = ability;
+            m_delayTime = delayTime;
         }
 
         #region Implementation of IAbility
@@ -22,11 +29,22 @@ namespace DesignPatterns.DecoratorPattern
         /// <inheritdoc />
         public void Use()
         {
-            // Do Delaying magic
-
-            m_ability.Use();
+            if (!m_inUse)
+                DelayUse();
         }
 
         #endregion
+
+        private async Task DelayUse()
+        {
+            m_inUse = true;
+            Debug.Log("Delaying Ability");
+
+            await Task.Delay(m_delayTime);
+
+            m_ability.Use();
+
+            m_inUse = false;
+        }
     }
 }
