@@ -6,16 +6,5 @@ using DesignPatterns.StrategyPattern;
 
 namespace DesignPatterns.DecoratorPattern.UI
 {
-    public class RageButton : AbilityButton<RageAbility>
-    {
-        #region Overrides of AbilityButton<RageAbility>
-
-        /// <inheritdoc />
-        public override void Use()
-        {
-            m_ability.Use();
-        }
-
-        #endregion
-    }
+    public class RageButton : AbilityButton<RageAbility> { }
 }

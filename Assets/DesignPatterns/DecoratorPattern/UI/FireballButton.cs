@@ -6,16 +6,5 @@ using DesignPatterns.StrategyPattern;
 
 namespace DesignPatterns.DecoratorPattern.UI
 {
-    public class FireballButton : AbilityButton<FireBallAbility>
-    {
-        #region Overrides of AbilityButton<FireBallAbility>
-
-        /// <inheritdoc />
-        public override void Use()
-        {
-            m_ability.Use();
-        }
-
-        #endregion
-    }
+    public class FireballButton : AbilityButton<FireBallAbility> { }
 }

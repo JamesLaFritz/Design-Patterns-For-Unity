@@ -6,16 +6,5 @@ using DesignPatterns.StrategyPattern;
 
 namespace DesignPatterns.DecoratorPattern.UI
 {
-    public class HealButton : AbilityButton<HealAbility>
-    {
-        #region Overrides of AbilityButton<HealAbility>
-
-        /// <inheritdoc />
-        public override void Use()
-        {
-            m_ability.Use();
-        }
-
-        #endregion
-    }
+    public class HealButton : AbilityButton<HealAbility> { }
 }
