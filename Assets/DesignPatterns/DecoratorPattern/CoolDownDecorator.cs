@@ -8,7 +8,7 @@ using UnityEngine;
 
 namespace DesignPatterns.DecoratorPattern
 {
-    public class CoolDownDecorator
+    public class CoolDownDecorator : IAbility
     {
         private readonly IAbility m_ability;
 
