@@ -45,6 +45,8 @@ namespace DesignPatterns.DecoratorPattern
 
             await Task.Delay(m_coolDownTime);
 
+            Debug.Log($"{m_ability.GetType().Name} can now be used.");
+
             m_inUse = false;
         }
     }
