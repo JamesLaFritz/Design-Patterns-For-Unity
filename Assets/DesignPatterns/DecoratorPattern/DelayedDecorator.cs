@@ -29,8 +29,11 @@ namespace DesignPatterns.DecoratorPattern
         /// <inheritdoc />
         public void Use()
         {
-            if (!m_inUse)
-                DelayUse();
+            if (m_inUse) return;
+
+            #pragma warning disable CS4014
+            DelayUse();
+            #pragma warning restore CS4014
         }
 
         #endregion
