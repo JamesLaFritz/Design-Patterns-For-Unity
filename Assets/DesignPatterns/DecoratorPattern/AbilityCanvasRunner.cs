@@ -32,8 +32,8 @@ namespace DesignPatterns.DecoratorPattern
 
         public void SetFireballAbility()
         {
-            if (m_currentAbility is not FireBallAbility)
-                m_currentAbility = new FireBallAbility();
+            m_currentAbility = new DelayedDecorator(new FireBallAbility());
+
             Use();
         }
 

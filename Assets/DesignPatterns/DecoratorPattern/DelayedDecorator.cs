@@ -8,7 +8,7 @@ namespace DesignPatterns.DecoratorPattern
 {
     public class DelayedDecorator : IAbility
     {
-        private IAbility m_ability;
+        private readonly IAbility m_ability;
 
         public DelayedDecorator(IAbility ability)
         {
