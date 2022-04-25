@@ -282,7 +282,6 @@ GameObject:
   - component: {fileID: 791776151}
   - component: {fileID: 791776150}
   - component: {fileID: 791776149}
-  - component: {fileID: 791776148}
   m_Layer: 5
   m_Name: Fireball Button (Legacy)
   m_TagString: Untagged
@@ -311,19 +310,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &791776148
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 791776146}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c37de773181d4bcabd95ff80beb80c32, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_abilityRunner: {fileID: 0}
 --- !u!114 &791776149
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -368,10 +354,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 791776148}
-        m_TargetAssemblyTypeName: DesignPatterns.DecoratorPattern.UI.FireballButton,
+      - m_Target: {fileID: 1426977925}
+        m_TargetAssemblyTypeName: DesignPatterns.DecoratorPattern.AbilityCanvasRunner,
           Assembly-CSharp
-        m_MethodName: Use
+        m_MethodName: SetFireballAbility
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -532,7 +518,6 @@ GameObject:
   - component: {fileID: 1210846458}
   - component: {fileID: 1210846457}
   - component: {fileID: 1210846456}
-  - component: {fileID: 1210846455}
   m_Layer: 5
   m_Name: Heal Button (Legacy)
   m_TagString: Untagged
@@ -561,19 +546,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1210846455
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1210846453}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1dfb3bbc8104570a45c2d0d88c11da7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_abilityRunner: {fileID: 0}
 --- !u!114 &1210846456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -618,10 +590,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1210846455}
-        m_TargetAssemblyTypeName: DesignPatterns.DecoratorPattern.UI.HealButton,
+      - m_Target: {fileID: 1426977925}
+        m_TargetAssemblyTypeName: DesignPatterns.DecoratorPattern.AbilityCanvasRunner,
           Assembly-CSharp
-        m_MethodName: Use
+        m_MethodName: SetHealAbility
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1059,7 +1031,6 @@ GameObject:
   - component: {fileID: 1821530827}
   - component: {fileID: 1821530826}
   - component: {fileID: 1821530825}
-  - component: {fileID: 1821530824}
   m_Layer: 5
   m_Name: Melee Button (Legacy)
   m_TagString: Untagged
@@ -1088,19 +1059,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1821530824
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1821530822}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d775c9eb51b54e598c529117555030a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_abilityRunner: {fileID: 0}
 --- !u!114 &1821530825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1145,10 +1103,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1821530824}
-        m_TargetAssemblyTypeName: DesignPatterns.DecoratorPattern.UI.MeleeButton,
+      - m_Target: {fileID: 1426977925}
+        m_TargetAssemblyTypeName: DesignPatterns.DecoratorPattern.AbilityCanvasRunner,
           Assembly-CSharp
-        m_MethodName: Use
+        m_MethodName: SetMeleeAbility
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1208,7 +1166,6 @@ GameObject:
   - component: {fileID: 1835768528}
   - component: {fileID: 1835768527}
   - component: {fileID: 1835768526}
-  - component: {fileID: 1835768525}
   m_Layer: 5
   m_Name: Rage Button (Legacy)
   m_TagString: Untagged
@@ -1237,19 +1194,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1835768525
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1835768523}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d8213fafb5446418969a67fd88770da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_abilityRunner: {fileID: 0}
 --- !u!114 &1835768526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1294,10 +1238,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1835768525}
-        m_TargetAssemblyTypeName: DesignPatterns.DecoratorPattern.UI.RageButton,
+      - m_Target: {fileID: 1426977925}
+        m_TargetAssemblyTypeName: DesignPatterns.DecoratorPattern.AbilityCanvasRunner,
           Assembly-CSharp
-        m_MethodName: Use
+        m_MethodName: SetRageAbility
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
