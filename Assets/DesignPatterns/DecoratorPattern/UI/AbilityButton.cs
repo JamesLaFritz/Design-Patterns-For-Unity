@@ -11,19 +11,14 @@ namespace DesignPatterns.DecoratorPattern.UI
     {
         protected T m_ability = new T();
 
-        [SerializeField] protected AbilityRunner m_abilityRunner;
-
-        public void SetAbility()
-        {
-            m_abilityRunner.CurrentAbility = m_ability;
-        }
+        [SerializeField] protected AbilityCanvasRunner m_abilityRunner;
 
         protected virtual void Awake()
         {
             if (m_abilityRunner != null) return;
             try
             {
-                m_abilityRunner = FindObjectOfType<AbilityRunner>();
+                m_abilityRunner = FindObjectOfType<AbilityCanvasRunner>();
             }
             catch (System.Exception e)
             {
@@ -38,9 +33,14 @@ namespace DesignPatterns.DecoratorPattern.UI
             Destroy(this);
         }
 
-        public virtual void Use()
+        public void SetAbility()
         {
             m_abilityRunner.CurrentAbility = m_ability;
+        }
+
+        public virtual void Use()
+        {
+            SetAbility();
             m_ability.Use();
         }
     }

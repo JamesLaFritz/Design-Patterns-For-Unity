@@ -323,6 +323,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c37de773181d4bcabd95ff80beb80c32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_abilityRunner: {fileID: 0}
 --- !u!114 &791776149
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -572,6 +573,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1dfb3bbc8104570a45c2d0d88c11da7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_abilityRunner: {fileID: 0}
 --- !u!114 &1210846456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -843,6 +845,7 @@ GameObject:
   - component: {fileID: 1426977924}
   - component: {fileID: 1426977923}
   - component: {fileID: 1426977922}
+  - component: {fileID: 1426977925}
   m_Layer: 5
   m_Name: Abilities
   m_TagString: Untagged
@@ -938,6 +941,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1426977920}
   m_CullTransparentMesh: 1
+--- !u!114 &1426977925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1426977920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9777b9f42d0484984ae09d2eade3e47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1667348768
 GameObject:
   m_ObjectHideFlags: 0
@@ -1085,6 +1100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d775c9eb51b54e598c529117555030a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_abilityRunner: {fileID: 0}
 --- !u!114 &1821530825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1233,6 +1249,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d8213fafb5446418969a67fd88770da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_abilityRunner: {fileID: 0}
 --- !u!114 &1835768526
 MonoBehaviour:
   m_ObjectHideFlags: 0
