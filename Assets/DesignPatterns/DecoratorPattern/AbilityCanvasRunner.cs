@@ -54,7 +54,7 @@ namespace DesignPatterns.DecoratorPattern
 
         public void SetRageAbility()
         {
-            if (m_currentAbility is not DelayedDecorator &&
+            if (m_currentAbility is not CoolDownDecorator &&
                 (m_currentAbility as CoolDownDecorator)?.Ability is not RageAbility)
                 m_currentAbility = new CoolDownDecorator(new RageAbility());
             Use();
