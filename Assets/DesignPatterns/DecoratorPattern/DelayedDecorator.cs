@@ -10,6 +10,8 @@ namespace DesignPatterns.DecoratorPattern
     {
         private readonly IAbility m_ability;
 
+        public IAbility Ability => m_ability;
+
         public DelayedDecorator(IAbility ability)
         {
             m_ability = ability;
