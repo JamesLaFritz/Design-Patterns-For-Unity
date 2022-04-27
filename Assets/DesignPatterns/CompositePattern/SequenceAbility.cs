@@ -20,7 +20,10 @@ namespace DesignPatterns.CompositePattern
         /// <inheritdoc />
         public void Use()
         {
-            
+            foreach (IAbility ability in m_abilities)
+            {
+                ability.Use();
+            }
         }
 
         #endregion
