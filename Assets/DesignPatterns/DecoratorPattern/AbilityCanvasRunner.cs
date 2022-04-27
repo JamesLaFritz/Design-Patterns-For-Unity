@@ -59,5 +59,13 @@ namespace DesignPatterns.DecoratorPattern
                 m_currentAbility = new CoolDownDecorator(new RageAbility());
             Use();
         }
+
+        public void SetPowerAttackAbility()
+        {
+            if (m_currentAbility is not CoolDownDecorator &&
+                (m_currentAbility as CoolDownDecorator)?.Ability is not RageAbility)
+                m_currentAbility = new CoolDownDecorator(new RageAbility());
+            Use();
+        }
     }
 }
