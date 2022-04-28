@@ -1107,7 +1107,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1426977925}
         m_TargetAssemblyTypeName: DesignPatterns.DecoratorPattern.AbilityCanvasRunner,
           Assembly-CSharp
-        m_MethodName: SetRageAbility
+        m_MethodName: SetPowerAttackAbility
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
