@@ -2,6 +2,7 @@
 // 04-24-2022
 // James LaFritz
 
+using DesignPatterns.CompositePattern;
 using DesignPatterns.StrategyPattern;
 using UnityEngine;
 
@@ -17,6 +18,17 @@ namespace DesignPatterns.DecoratorPattern
             set => m_currentAbility = value;
         }
 
+        private readonly SequenceAbility m_powerAttackAbility = new SequenceAbility(
+            new IAbility[]
+            {
+                new HealAbility(), new RageAbility(),
+                new ParallelAbility(new IAbility[]
+                {
+                    new MeleeAbility(),
+                    new DelayedDecorator(new MeleeAbility())
+                })
+            });
+
         private void Update()
         {
             if (Input.GetKeyDown(KeyCode.Space))
@@ -28,6 +40,12 @@ namespace DesignPatterns.DecoratorPattern
         private void Use()
         {
             m_currentAbility?.Use();
+        }
+
+        public void SetPowerAttackAbility()
+        {
+            m_currentAbility = m_powerAttackAbility;
+            Use();
         }
 
         public void SetFireballAbility()
