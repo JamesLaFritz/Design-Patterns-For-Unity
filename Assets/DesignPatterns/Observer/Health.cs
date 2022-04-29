@@ -12,7 +12,7 @@ namespace Observer
     {
         [SerializeField] private int m_fullHealth = 100;
         [SerializeField] private int m_drainPerSecond = 2;
-        public float CurrentHealth { get; private set; } = 0;
+        public float CurrentHealth { get; private set; }
 
         private void Awake()
         {
@@ -37,6 +37,7 @@ namespace Observer
 
         private void LevelUpHealth(int currentLevel)
         {
+            m_fullHealth += m_fullHealth / currentLevel * m_fullHealth;
             ResetHealth();
         }
 
