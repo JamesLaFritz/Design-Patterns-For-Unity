@@ -13,7 +13,17 @@ namespace Observer
     {
         [SerializeField] private float m_fullHealth = 100;
         [SerializeField] private int m_drainPerSecond = 2;
-        public float CurrentHealth { get; private set; }
+        private float m_currentHealth;
+
+        public float CurrentHealth
+        {
+            get => m_currentHealth;
+            set
+            {
+                m_currentHealth = Mathf.Clamp(value, 0, m_fullHealth);
+                OnHealthChanged();
+            }
+        }
 
         /// <summary>
         /// Every Time the Health Changes let observers know what the Current Health is and what the Max Health is.
