@@ -2,6 +2,7 @@
 // 03-01-2022
 // James LaFritz
 
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -10,9 +11,14 @@ namespace Observer
     [RequireComponent(typeof(Level))]
     public class Health : MonoBehaviour
     {
-        [SerializeField] private int m_fullHealth = 100;
+        [SerializeField] private float m_fullHealth = 100;
         [SerializeField] private int m_drainPerSecond = 2;
         public float CurrentHealth { get; private set; }
+
+        /// <summary>
+        /// Every Time the Health Changes let observers know what the Current Health is and what the Max Health is.
+        /// </summary>
+        public Action<float, float> onHealthChanged;
 
         private void Awake()
         {
