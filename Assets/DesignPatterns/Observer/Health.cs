@@ -55,5 +55,7 @@ namespace Observer
                 yield return new WaitForSeconds(1);
             }
         }
+
+        private void OnHealthChanged() => onHealthChanged?.Invoke(CurrentHealth, m_fullHealth);
     }
 }
