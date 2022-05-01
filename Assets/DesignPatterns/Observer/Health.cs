@@ -20,7 +20,7 @@ namespace Observer
             get => m_currentHealth;
             set
             {
-                m_currentHealth = m_currentHealth < m_fullHealth ? Mathf.Clamp(value, 0, m_fullHealth) : Mathf.Max(0, value);
+                m_currentHealth = m_currentHealth <= m_fullHealth ? Mathf.Clamp(value, 0, m_fullHealth) : Mathf.Max(0, value);
                 OnHealthChanged();
             }
         }
