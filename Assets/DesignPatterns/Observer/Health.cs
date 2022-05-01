@@ -20,7 +20,22 @@ namespace Observer
             get => m_currentHealth;
             set
             {
-                m_currentHealth = m_currentHealth <= m_fullHealth ? Mathf.Clamp(value, 0, m_fullHealth) : Mathf.Max(0, value);
+                m_currentHealth = m_currentHealth <= m_fullHealth
+                    ? Mathf.Clamp(value, 0, m_fullHealth)
+                    : Mathf.Max(0, value);
+                OnHealthChanged();
+            }
+        }
+
+        public float MaxHealth
+        {
+            get => m_fullHealth;
+            set
+            {
+                float max = Mathf.Max(1, value);
+                m_currentHealth = Mathf.Max(Mathf.Clamp(m_currentHealth + max - m_fullHealth, 1, value),
+                                            m_currentHealth);
+                m_fullHealth = max;
                 OnHealthChanged();
             }
         }
@@ -66,6 +81,6 @@ namespace Observer
             }
         }
 
-        private void OnHealthChanged() => onHealthChanged?.Invoke(CurrentHealth, m_fullHealth);
+        private void OnHealthChanged() => onHealthChanged?.Invoke(m_currentHealth, m_fullHealth);
     }
 }
