@@ -14,6 +14,8 @@ namespace Observer
         [SerializeField] private int m_pointsPerLevel = 200;
         public int ExperiencePoints { get; private set; }
 
+        public int MaxExperiencePoints => m_pointsPerLevel * CurrentLevel;
+
         public int CurrentLevel => ExperiencePoints / m_pointsPerLevel;
 
         public delegate void LevelUpActionType(int currentLevel);
