@@ -20,7 +20,7 @@ namespace Observer
 
         public event LevelUpActionType OnLevelUp;
 
-        private void GainExperience(int amountToGain)
+        public void GainExperience(int amountToGain)
         {
             int previousLevel = CurrentLevel;
             ExperiencePoints += amountToGain;
