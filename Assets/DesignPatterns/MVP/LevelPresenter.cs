@@ -66,7 +66,10 @@ namespace DesignPatterns.MVP
             m_level.GainExperience(10);
         }
 
-        private void OnExperienceChanged() { }
+        private void OnExperienceChanged()
+        {
+            m_xpSlider.value = m_level.ExperiencePoints / m_level.MaxExperiencePoints;
+        }
 
         private void OnLevelUp(int currentlevel) { }
     }
