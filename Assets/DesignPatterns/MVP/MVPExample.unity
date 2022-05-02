@@ -6548,6 +6548,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_level: {fileID: 2098092629}
+  m_xpSlider: {fileID: 227327448}
+  m_levelText: {fileID: 1689917617}
+  m_gainXPButton: {fileID: 58370014}
 --- !u!1 &2098092625
 GameObject:
   m_ObjectHideFlags: 0
