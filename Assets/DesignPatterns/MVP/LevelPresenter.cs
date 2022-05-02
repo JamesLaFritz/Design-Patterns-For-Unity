@@ -71,6 +71,9 @@ namespace DesignPatterns.MVP
             m_xpSlider.value = m_level.ExperiencePoints / m_level.MaxExperiencePoints;
         }
 
-        private void OnLevelUp(int currentlevel) { }
+        private void OnLevelUp(int currentlevel)
+        {
+            m_levelText.text = $"{currentlevel}";
+        }
     }
 }
