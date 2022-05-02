@@ -71,7 +71,7 @@ namespace DesignPatterns.MVP
 
         private void OnExperienceChanged()
         {
-            m_xpSlider.value = m_level.ExperiencePoints / m_level.MaxExperiencePoints;
+            m_xpSlider.value = (float)m_level.ExperiencePoints / m_level.MaxExperiencePoints;
         }
 
         private void OnLevelUp(int currentlevel)
