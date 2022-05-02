@@ -47,6 +47,9 @@ namespace DesignPatterns.MVP
 
         private void OnEnable()
         {
+            OnExperienceChanged();
+            OnLevelUp(m_level.CurrentLevel);
+
             m_gainXPButton?.onClick.AddListener(OnGainExperienceClicked);
 
             m_level.onExperienceChanged += OnExperienceChanged;
