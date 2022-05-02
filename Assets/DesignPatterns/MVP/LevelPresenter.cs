@@ -44,5 +44,30 @@ namespace DesignPatterns.MVP
                 enabled = false;
             }
         }
+
+        private void OnEnable()
+        {
+            m_gainXPButton?.onClick.AddListener(OnGainExperienceClicked);
+
+            m_level.onExperienceChanged += OnExperienceChanged;
+            m_level.OnLevelUp += OnLevelUp;
+        }
+
+        private void OnDisable()
+        {
+            m_gainXPButton?.onClick.RemoveListener(OnGainExperienceClicked);
+
+            m_level.onExperienceChanged -= OnExperienceChanged;
+            m_level.OnLevelUp -= OnLevelUp;
+        }
+
+        private void OnGainExperienceClicked()
+        {
+            m_level.GainExperience(10);
+        }
+
+        private void OnExperienceChanged() { }
+
+        private void OnLevelUp(int currentlevel) { }
     }
 }
