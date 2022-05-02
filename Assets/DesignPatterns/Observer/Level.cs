@@ -20,15 +20,6 @@ namespace Observer
 
         public event LevelUpActionType OnLevelUp;
 
-        private IEnumerator Start()
-        {
-            while (true)
-            {
-                yield return new WaitForSeconds(0.2f);
-                GainExperience(10);
-            }
-        }
-
         private void GainExperience(int amountToGain)
         {
             int previousLevel = CurrentLevel;
