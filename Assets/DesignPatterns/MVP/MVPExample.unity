@@ -6493,6 +6493,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_health: {fileID: 2098092628}
+  m_healthSlider: {fileID: 455078687}
 --- !u!1 &1776511067
 GameObject:
   m_ObjectHideFlags: 0

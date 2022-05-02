@@ -4,6 +4,7 @@
 
 using Observer;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace DesignPatterns.MVP
 {
@@ -11,12 +12,22 @@ namespace DesignPatterns.MVP
     {
         [SerializeField] private Health m_health;
 
+        [SerializeField] private Slider m_healthSlider;
+
         private void Awake()
         {
             if (m_health == null)
             {
                 Debug.LogWarning(
                     "Health Presenter needs a Health to present please make sure one is set in The Inspector",
+                    gameObject);
+                enabled = false;
+            }
+
+            if (m_healthSlider == null)
+            {
+                Debug.LogWarning(
+                    "Health Presenter needs a Slider to Update please make sure one is set in The Inspector",
                     gameObject);
                 enabled = false;
             }
