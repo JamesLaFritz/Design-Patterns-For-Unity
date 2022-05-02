@@ -21,5 +21,17 @@ namespace DesignPatterns.MVP
                 enabled = false;
             }
         }
+
+        private void OnEnable()
+        {
+            m_health.onHealthChanged += OnHealthChanged;
+        }
+
+        private void OnDisable()
+        {
+            m_health.onHealthChanged -= OnHealthChanged;
+        }
+
+        private void OnHealthChanged(float currentHealth, float maxHealth) { }
     }
 }
