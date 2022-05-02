@@ -74,10 +74,13 @@ namespace Observer
 
         private IEnumerator HealthDrain()
         {
-            while (CurrentHealth > 0)
+            while (true)
             {
+                if (m_currentHealth <= 1)
+                    continue;
+
                 CurrentHealth -= m_drainPerSecond;
-                yield return new WaitForSeconds(0.1f);
+                yield return new WaitForSeconds(1);
             }
         }
 

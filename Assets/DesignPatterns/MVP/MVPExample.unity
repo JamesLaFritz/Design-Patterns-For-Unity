@@ -6581,7 +6581,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_fullHealth: 100
-  m_drainPerSecond: 2
+  m_drainPerSecond: 1
 --- !u!114 &2098092629
 MonoBehaviour:
   m_ObjectHideFlags: 0
