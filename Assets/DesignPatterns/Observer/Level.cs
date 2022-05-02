@@ -2,6 +2,7 @@
 // 03-01-2022
 // James LaFritz
 
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
@@ -22,10 +23,13 @@ namespace Observer
 
         public event LevelUpActionType OnLevelUp;
 
+        public Action onExperienceChanged;
+
         public void GainExperience(int amountToGain)
         {
             int previousLevel = CurrentLevel;
             ExperiencePoints += amountToGain;
+            onExperienceChanged?.Invoke();
             if (CurrentLevel <= previousLevel) return;
 
             m_levelUpEvent?.Invoke();
