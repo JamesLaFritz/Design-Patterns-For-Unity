@@ -68,7 +68,7 @@ namespace Observer
 
         private void LevelUpHealth(int currentLevel)
         {
-            m_fullHealth += m_fullHealth / currentLevel * m_fullHealth;
+            m_fullHealth += currentLevel * m_fullHealth / m_fullHealth;
             ResetHealth();
         }
 
@@ -77,7 +77,7 @@ namespace Observer
             while (CurrentHealth > 0)
             {
                 CurrentHealth -= m_drainPerSecond;
-                yield return new WaitForSeconds(1);
+                yield return new WaitForSeconds(0.1f);
             }
         }
 
