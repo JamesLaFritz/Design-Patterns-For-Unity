@@ -33,6 +33,11 @@ namespace DesignPatterns.MVP
             }
         }
 
+        private void Start()
+        {
+            OnHealthChanged(m_health.CurrentHealth, m_health.MaxHealth);
+        }
+
         private void OnEnable()
         {
             m_health.onHealthChanged += OnHealthChanged;
@@ -43,6 +48,9 @@ namespace DesignPatterns.MVP
             m_health.onHealthChanged -= OnHealthChanged;
         }
 
-        private void OnHealthChanged(float currentHealth, float maxHealth) { }
+        private void OnHealthChanged(float currentHealth, float maxHealth)
+        {
+            m_healthSlider.value = currentHealth / maxHealth;
+        }
     }
 }
