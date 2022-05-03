@@ -2,7 +2,7 @@
 // 03-01-2022
 // James LaFritz
 
-using System.Collections;
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -14,25 +14,21 @@ namespace Observer
         [SerializeField] private int m_pointsPerLevel = 200;
         public int ExperiencePoints { get; private set; }
 
+        public int MaxExperiencePoints => m_pointsPerLevel * (CurrentLevel + 1);
+
         public int CurrentLevel => ExperiencePoints / m_pointsPerLevel;
 
         public delegate void LevelUpActionType(int currentLevel);
 
         public event LevelUpActionType OnLevelUp;
 
-        private IEnumerator Start()
-        {
-            while (true)
-            {
-                yield return new WaitForSeconds(0.2f);
-                GainExperience(10);
-            }
-        }
+        public Action onExperienceChanged;
 
-        private void GainExperience(int amountToGain)
+        public void GainExperience(int amountToGain)
         {
             int previousLevel = CurrentLevel;
             ExperiencePoints += amountToGain;
+            onExperienceChanged?.Invoke();
             if (CurrentLevel <= previousLevel) return;
 
             m_levelUpEvent?.Invoke();
