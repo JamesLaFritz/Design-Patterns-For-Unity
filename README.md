@@ -67,7 +67,6 @@
       </ul>
     </li>
     <li><a href="#license">License</a></li>
-    <li><a href="#acknowledgements">Acknowledgements</a></li>
   </ol>
 </details>
 
@@ -90,9 +89,25 @@ Demonstrates Different Programming Design Patterns In Unity. There are many diff
 <!-- Articles -->
 ### Articles
 
-[The Observer Pattern](https://blog.devgenius.io/making-the-inspector-look-better-175baf39ada0)
-[]()
-[]()
+[The Observer Pattern](https://blog.devgenius.io/the-observer-pattern-in-unity-4ee8e12100aa)
+
+[The Singleton Pattern In Unity](https://blog.devgenius.io/the-singleton-pattern-in-unity-b7b3bc051a62)
+
+[State Pattern In Unity](https://blog.devgenius.io/state-pattern-in-unity-cd180f98c45)
+
+[Finite State Machines In Unity](https://ktmarine1999.medium.com/finite-state-machines-in-unity-950b912ce844)
+
+[Object Pool Pattern in Unity](https://blog.devgenius.io/object-pool-pattern-in-unity-f285adea5d5a)
+
+[Strategy Pattern In Unity](https://blog.devgenius.io/strategy-pattern-in-unity-b82065aaa969)
+
+[The Decorator Pattern in Unity](https://blog.devgenius.io/the-decorator-pattern-in-unity-6791ab10b64)
+
+[Composite Pattern in Unity](https://blog.devgenius.io/composite-pattern-in-unity-fc90e60c946f)
+
+[Model View Controller Family](https://blog.devgenius.io/model-view-controller-family-3a0d869d81ea)
+
+[Model View Controller (MVC) Pattern In Unity](https://blog.devgenius.io/model-view-controller-mvc-pattern-in-unity-4ec9061dd0c)
 
 
 
@@ -107,13 +122,6 @@ See the [open issues](https://github.com/JamesLaFritz/Design-Patterns-For-Unity/
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
-
-
-<!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
-
-* [Scribtable Object Game Events](https://blog.devgenius.io/scriptableobject-game-events-1f3401bbde72)
-* [Making The Inspector Look Better](https://blog.devgenius.io/making-the-inspector-look-better-175baf39ada0)
 
 
 <!--
